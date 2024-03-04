@@ -1,0 +1,153 @@
+body{
+    background-color: #1c2630;
+}
+.navbar {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    align-items: center;
+    justify-content: center; /* Wyrównanie po środku */
+    padding: 10px;
+}
+
+.dropbtn {
+    background-color: transparent;
+    color: white;
+    padding: 10px 20px;
+    font-size: 30px;
+    border: none;
+    cursor: pointer;
+    font-family: Luminari, fantasy;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #1c2630;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+#przycisk1, #przycisk2, #przycisk3 {
+    text-align: center;
+}
+
+#przycisk1 {
+    grid-column: 4;
+    grid-row: 1;
+}
+
+#przycisk2 {
+    grid-column: 5;
+    grid-row: 1;
+}
+
+#przycisk3 {
+    grid-column: 6;
+    grid-row: 1;
+}
+
+#przycisk4 {
+    grid-column: 7;
+    grid-row: 1;
+}
+.container {
+    display: grid;
+    grid-template-columns: 1fr; /* Jeden kolumna */
+    justify-content: center; /* Wycentrowanie */
+    align-items: center; /* Wyrównanie wertykalne */
+    height: 100vh; /* Pełna wysokość ekranu */
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr; /* Jeden kolumna */
+    justify-content: center; /* Wycentrowanie */
+    align-items: center; /* Wyrównanie wertykalne */
+    max-width: 80%; /* Maksymalna szerokość */
+}
+
+header {
+    position: fixed; /* aby nagłówek pozostał na górze strony */
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #1c2630;
+    border-bottom: 6px solid black;
+}
+
+/* Dodajemy media query dla większych ekranów */
+@media (min-width: 769px) {
+    .navbar {
+        grid-template-columns: repeat(3, auto);
+        justify-content: flex-end; /* Na większych ekranach wyrównaj do prawej strony */
+        width: 100%; /* Aby navbar rozciągał się na szerokość */
+    }
+
+    .dropdown {
+        right: 0; /* Wyrównaj dropdowny do prawej strony */
+    }
+}
+
+
+#naglowek {
+    grid-row: 1;
+    left:0;
+    color: white;
+    font-size: 24px;
+    font-family: Luminari, fantasy;
+    margin: 0; /* Resetujemy margines */
+    padding: 10px; /* Dodajemy wypełnienie */
+    justify-self: start; /* Wyrównujemy do lewej */
+}
+
+.navbar {
+    display: grid;
+    grid-template-columns: auto 1fr; /* zmieniono tutaj */
+    align-items: center;
+    justify-content: space-between; /* zmieniono tutaj */
+    padding: 10px;
+    grid-column: auto; /* zmieniono tutaj */
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* trzy kolumny o jednakowej szerokości */
+    grid-template-rows: auto; /* wiersze o wysokości dopasowanej do zawartości */
+    gap: 10px; /* odstęp między elementami */
+  }
+  
+  #zdj1 {
+    height: 80%;
+    width: 125%;
+    grid-column: 1 / span 3; /* zajmowanie trzech kolumn */
+  }
+  
+@media (min-width: 769px) {
+    .navbar {
+        grid-template-columns: auto auto 1fr; /* zmieniono tutaj */
+        justify-content: flex-end;
+        width: 100%;
+    }
+
+    .dropdown {
+        right: 0;
+    }
+}
+
